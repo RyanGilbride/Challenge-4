@@ -10,7 +10,7 @@ public class EnemyX : MonoBehaviour
 
     public int waveCount;
 
-    // Start is called before the first frame update
+    // Start called before the first frame update
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
@@ -18,7 +18,7 @@ public class EnemyX : MonoBehaviour
         waveCount = GameObject.Find("Spawn Manager").GetComponent<SpawnManagerX>().waveCount;
     }
 
-    // Update is called once per frame
+    // Update called once per frame
     void Update()
     {
         // Set enemy direction towards player goal and move there
@@ -29,7 +29,7 @@ public class EnemyX : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        // If enemy collides with either goal, destroy it
+        // If enemy collides with either goal, it gets destroyed
         if (other.gameObject.name == "Enemy Goal")
         {
             Destroy(gameObject);
