@@ -67,5 +67,4 @@ public class SpawnManagerX : MonoBehaviour
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
     }
-
 }
